@@ -1,0 +1,115 @@
+<html>
+    <title>
+        Calculator
+    </title>
+    <head>
+        <link rel="stylesheet" href="./bootstrap.min.css">
+        <script src="./bootstrap.min.js"></script>
+    </head>
+    <style>
+    body{
+        padding:40px;
+        margin: 0px;
+    }
+    h6{
+        border:2px solid black !important;
+        border: 2px solid;
+        text-align: center;
+        padding: 10px;
+    }
+    h1
+    {
+        text-align: center;
+        color: blue;
+    }
+    h5{
+        color: white;
+    }
+    </style>
+    <body>
+        <div class="container bg-dark" style="padding: 20px;">
+            <h1>Calculator</h1><br><br>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Input 1</h5>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="input_one"  placeholder="Enter first Number....."/><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Input 2</h5>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="input_two"  placeholder="Enter second Number....."/><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 offset-md-4">
+                    <button type="button" class="btn btn-primary" onclick="add()">Addition(+)</button>
+                </div>
+                <div class=" col-md-2">
+                    <button type="button" class="btn btn-primary" onclick="sub()">Subtraction(-)</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" onclick="multiply()">Multiplication(*)</button>
+                </div>
+                <div class=" col-md-2">
+                    <button type="button" class="btn btn-primary" onclick="divide()">Division(/)</button><br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Result</h5>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="display_result"  placeholder="Result is...."><br><br>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-md-4 offset-md-8">
+                    <button type="button" class="btn btn-success" onclick="display()">Calculate</button>
+                </div>
+            </div> -->
+        </div>
+    </body>
+    <script  type="text/javascript">
+        // var input1=document.getElementById("input_one").value;
+        // var input2=document.getElementById("input_two").value;  ;
+         var result="";
+
+        function add()
+        {
+            var input1= parseInt(document.getElementById("input_one").value);
+            var input2=parseInt(document.getElementById("input_two").value);  
+            result=input1+input2;
+            document.getElementById("display_result").value=result;
+        }
+        function sub()
+        {
+            var input1= parseInt(document.getElementById("input_one").value);
+            var input2=parseInt(document.getElementById("input_two").value);  
+            result=input1-input2;
+            document.getElementById("display_result").value=result;
+        }
+        function multiply()
+        {
+            var input1= parseInt(document.getElementById("input_one").value);
+            var input2=parseInt(document.getElementById("input_two").value);  
+            result=input1*input2;
+            document.getElementById("display_result").value=result;
+        }
+        function divide()
+        {
+            var input1= parseInt(document.getElementById("input_one").value);
+            var input2=parseInt(document.getElementById("input_two").value);  
+            result=input1/input2;
+            document.getElementById("display_result").value=result;
+        }
+        // function display()
+        // {
+        //     document.getElementById("display_result").value=result;
+        // }
+    </script>
+</html>

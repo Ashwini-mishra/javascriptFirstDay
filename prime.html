@@ -1,0 +1,45 @@
+<html>
+    <title>
+       Prime number
+    </title>
+    <head>
+        <link rel="stylesheet" href="./bootstrap.min.css">
+        <script src="./bootstrap.min.js"></script>
+    </head>
+    <style>
+    body{
+        padding:40px;
+        margin: 0px;
+    }
+    </style>
+    <body>
+        <button type="button" class="btn btn-primary" onclick="number()">start</button><br><br>
+    </body>
+    <script  type="text/javascript">
+  
+
+    function prime(num)
+    {
+        var count=0;
+        for(var i=2;i<num;i++)
+        {
+            if(num%i==0) 
+            {
+                count++;
+            }
+        }
+        if(count<1)
+        {
+            console.log(num);
+        }
+    }
+       
+       function number()
+       {
+           for(var i=2;i<10000;i++)
+           {
+               prime(i);
+           }
+       }
+    </script>
+</html>
